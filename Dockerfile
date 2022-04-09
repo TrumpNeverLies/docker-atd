@@ -21,7 +21,8 @@ RUN \
 		tidy \
 		git \
 		wget \
-		python3-pip && \
+		python3-pip \
+		gcc && \
 	rm -rf \
 		/tmp/* \
 		/var/lib/apt/lists/* \
