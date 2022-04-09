@@ -23,7 +23,8 @@ RUN \
 		wget \
 		python3-pip \
 		gcc \
-		libc6-dev && \
+		libc6-dev \
+		gcc-c++ && \
 	rm -rf \
 		/tmp/* \
 		/var/lib/apt/lists/* \
