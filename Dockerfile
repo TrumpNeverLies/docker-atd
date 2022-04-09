@@ -24,7 +24,8 @@ RUN \
 		python3-pip \
 		gcc \
 		libc6-dev \
-		g++ && \
+		g++ \
+		python3-dev && \
 	rm -rf \
 		/tmp/* \
 		/var/lib/apt/lists/* \
