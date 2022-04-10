@@ -167,7 +167,7 @@ log () {
 
 LidarrConnection () {
 
-	lidarrdata=$(curl -s --header "X-Api-Key:"${LidarrApiKey} --request GET  "$LidarrUrl/api/v1/Artist/")
+	lidarrdata=$(curl -s --header "X-Api-Key:"${LidarrApiKey} --request GET  "$LidarrUrl/api/v1/Artist/" | jq -c '.[] | select( .monitored )')
 	artisttotal=$(echo "${lidarrdata}"| jq -r '.[].sortName' | wc -l)
 	lidarrlist=($(echo "${lidarrdata}" | jq -r ".[].foreignArtistId"))
 	log "############# Music Downloads"
